@@ -16,4 +16,10 @@
 
 //Handle the click event for the cities in the search history.
 
-//api 71d1bf2fb629e5895f40848fc4911d1b
+var apiKey = "71d1bf2fb629e5895f40848fc4911d1b"
+
+var city;
+
+var queryURL = "http://api.openweathermap.org/data/2.5/weather?q=" + torrington + "&appid=" + 71d1bf2fb629e5895f40848fc4911d1b;
+
+fetch(queryURL)
