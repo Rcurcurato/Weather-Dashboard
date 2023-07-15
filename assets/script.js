@@ -15,3 +15,5 @@
 //storage or server side database.
 
 //Handle the click event for the cities in the search history.
+
+//api 71d1bf2fb629e5895f40848fc4911d1b
