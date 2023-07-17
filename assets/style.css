@@ -33,7 +33,7 @@ h1 {
 }
       
 
-.top-box {
+#current-weather {
 
     display: flex;
     justify-content: center;
@@ -77,7 +77,7 @@ h3 {
     font-size: 32px;
 }
 
-.row {
+.five-day-forecast {
 
     display: flex;
     justify-content: center;
