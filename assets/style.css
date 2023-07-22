@@ -22,7 +22,7 @@ h1 {
 
 }
 
-.card {
+.forecast-container {
 
     margin-left: 300px;
     font-size: 18px;
@@ -72,15 +72,26 @@ h1 {
 }
 
 .five-day-forecast {
-    
+    text-align: center;
     display: flex;
     justify-content: center;
-    height: 100px;
-    
+
 }
+
 h3 {
 
-    font-size: 32px;
+font-size: 32px;
+display: flex;
+justify-content: center;
 
 
+}
+
+.column {
+
+    border: solid black;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    
 }

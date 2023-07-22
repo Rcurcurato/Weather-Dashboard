@@ -16,4 +16,14 @@
 
 //Handle the click event for the cities in the search history.
 
+var inputEl = document.querySelector('#city-input')
+
+var urlRequest = "api.openweathermap.org/data/2.5/forecast?"
+
+var cardEl = document.getElementById('card')
+
+function createWeatherCard(weather){
+
+    
+}
 

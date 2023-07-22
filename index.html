@@ -17,7 +17,7 @@
 
     <div class="sidebar">
         <h2>Search for a City</h2>
-        <input id="city-input"><br>
+        <input id="city-input" placeholder="Enter City Name">
         <button id="search-btn">Search</button>
         <div id="search-history">
             <h2>Search History</h2>
@@ -27,16 +27,21 @@
     <div id="cities">
     </div>
 
-    <div class="card">
+    <div class="forecast-container" id="forecast-container">
         <h2>Current Weather</h2>
         <div>
-            <h5 class=card-information>Temperature</h5>
-            <h5 class=card-information>Wind</h5>
-            <h5 class=card-information>Humidity</h5>
+            <h5 class ="card-information">Temperature</h5>
+            <h5 class="card-information">Wind</h5>
+            <h5 class="card-information">Humidity</h5>
         </div>
         <div>
+            <h3>5-Day Forecast:</h3>
             <div class="five-day-forecast">
-                <h3>5-Day Forecast:</h3>
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
+                <div class="column"></div>
             </div>
         </div>
 
