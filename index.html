@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css" />
-
     <title>Weather Dashboard</title>
 </head>
-
 <header>
     <h1>Weather Dashboard</h1>
 </header>
 
 <body>
-
     <div class="sidebar">
         <h2>Search for a City</h2>
         <input id="city-input" placeholder="Enter City Name">
@@ -26,27 +23,29 @@
     </div>
     <div id="cities">
     </div>
+    <!--current weather-->
+    <h2>Current Weather</h2>
+    <div class="weather-card" id="weather-card">
+        <div id="current-city"></div>
+        <div id="icon"></div>
+        <div id="temperature"></div>
+        <div id="wind"></div>
+        <div id="humidity"></div>
+    </div>
 
-    <div class="forecast-container" id="forecast-container">
-        <h2>Current Weather</h2>
-        <div>
-            <h5 class ="card-information">Temperature</h5>
-            <h5 class="card-information">Wind</h5>
-            <h5 class="card-information">Humidity</h5>
-        </div>
-        <div>
-            <h3>5-Day Forecast:</h3>
-            <div class="five-day-forecast">
-                <div class="column"></div>
-                <div class="column"></div>
-                <div class="column"></div>
-                <div class="column"></div>
-                <div class="column"></div>
-            </div>
-        </div>
+    <!--future weather 5 day forecast-->
+    <h3>5-Day Forecast:</h3>
+    <div class="five-day-forecast">
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+        <div class="column"></div>
+    </div>
 
-        <script src="./assets/script.js"></script>
 
+    <!-- Include the separate script.js file -->
+    <script src="./assets/script.js"></script>
 </body>
 
 </html>

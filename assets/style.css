@@ -19,24 +19,23 @@ h1 {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-
 }
 
-.forecast-container {
+h2 {
+    display: flex;
+    justify-content: center;
+}
 
+.weather-card {
+    
     margin-left: 300px;
     font-size: 18px;
     height: 200px;
-
-}
-
-#current-weather {
-
-    display: flex;
-    justify-content: center;
     width: 1200px;
     height: 200px;
-    border: 1px solid black;
+    border: 2px solid black;
+    font-size: 30px;
+    font-weight: bolder;
 
 
 }
@@ -95,3 +94,4 @@ justify-content: center;
     margin: 10px;
     
 }
+
