@@ -7,11 +7,12 @@
     <link rel="stylesheet" href="assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
+<!--title-->
 <header>
     <h1>Weather Dashboard</h1>
 </header>
-
 <body>
+    <!--city search-->
     <div class="sidebar">
         <h2>Search for a City</h2>
         <input id="city-input" placeholder="Enter City Name">
@@ -20,6 +21,7 @@
             <h2>Search History</h2>
             <ul id="history"></ul>
         </div>
+        <!--list of searched cities-->
     </div>
     <div id="cities">
     </div>
@@ -34,18 +36,21 @@
     </div>
 
     <!--future weather 5 day forecast-->
-    <h3>5-Day Forecast:</h3>
-    <div class="five-day-forecast">
+    <h2>5 Day Forecast</h2>
+
+    <div id="forecast-card" class="container">
+
+        <div class="row"></div>
+        
         <div class="column"></div>
         <div class="column"></div>
         <div class="column"></div>
         <div class="column"></div>
         <div class="column"></div>
     </div>
-
-
-    <!-- Include the separate script.js file -->
+    
     <script src="./assets/script.js"></script>
+
 </body>
 
 </html>
