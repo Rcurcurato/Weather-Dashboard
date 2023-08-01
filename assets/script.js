@@ -54,12 +54,13 @@ function clearSearchHistory() {
 }
 //add event listener for clear button
 document.getElementById("clear-btn").addEventListener("click", function () {
-
+    
+    //Clear search history list
+    clearSearchHistory();
+    
     //clear search history
     localStorage.clear()
-
-    clearSearchHistory();
-
+    
     //Clear text on webpage
     document.getElementById("weather-card").innerHTML = "";
     document.getElementById("forecast-card").innerHTML = "";
@@ -140,7 +141,7 @@ function fetchWeatherData(cityName) {
                     <div>Wind Speed: ${forecastWind} m/s</div>
                     <div>Humidity: ${forecastHumidity}%</div>
                     `;
-                columnEl.innerHTML += forecastContent;
+                columnEl.innerHTML = forecastContent;
 
             }
         })
