@@ -77,7 +77,20 @@ h2 {
     font-size: 32px;
 }
 
+#history {
+    font-size: 22px;
+    font-weight: bolder;
+    list-style: none;
 
+}
+
+#clear-btn {
+
+    margin-top: 5px;
+    padding: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
 
 h3 {
 

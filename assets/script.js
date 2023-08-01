@@ -23,17 +23,17 @@ var cities = [];
 //saves searched cities to local storage and retrieves data to display
 //it to saved city list on page
 function renderCities() {
-cityList.innerHTML = "";
+    cityList.innerHTML = "";
 
-for (var i = 0; i < cities.length; i++) {
-    var city = cities[i];
+    for (var i = 0; i < cities.length; i++) {
+        var city = cities[i];
 
-    var li = document.createElement("li");
-    li.textContent = city;
-    li.setAttribute("data-index", i);
+        var li = document.createElement("li");
+        li.textContent = city;
+        li.setAttribute("data-index", i);
 
-    cityList.appendChild(li);
-}
+        cityList.appendChild(li);
+    }
 
 }
 
@@ -46,6 +46,30 @@ if (storedCities !== null) {
     cities = storedCities;
     renderCities();
 }
+
+
+// Function to clear the search history from local storage and the displayed list
+function clearSearchHistory() {
+    cityList.innerHTML = "";
+}
+//add event listener for clear button
+document.getElementById("clear-btn").addEventListener("click", function () {
+
+    //clear search history
+    localStorage.clear()
+
+    clearSearchHistory();
+
+    //Clear text on webpage
+    document.getElementById("weather-card").innerHTML = "";
+    document.getElementById("forecast-card").innerHTML = "";
+
+    if (cities.length > 0) {
+        var lastSearchedCity = cities[cities.length - 1];
+        fetchForecastData(lastSearchedCity);
+    }
+});
+
 //function to fetch weather data from api and display it to page when user searches for a city
 function fetchWeatherData(cityName) {
     var queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
@@ -70,7 +94,7 @@ function fetchWeatherData(cityName) {
             var windEl = document.getElementById("wind");
             var humidityEl = document.getElementById("humidity");
             iconEl.innerHTML = `<img src="https://openweathermap.org/img/w/${data.weather[0].icon}.png" alt="Weather Icon">`;
-            
+
             currentCityEl.textContent = data.name;
             iconEl.textContent = "Weather Icon: " + data.weather[0].icon;
             temperatureEl.textContent = "Temperature: " + data.main.temp + " K";
@@ -82,19 +106,17 @@ function fetchWeatherData(cityName) {
             alert("Error fetching weather data. Please try again later.");
         });
 
-        //function to fetch future 5 day weather forecast and display it into 5 seperate boxes when user searches for a city
+    //function to fetch future 5 day weather forecast and display it into 5 seperate boxes when user searches for a city
 } function fetchForecastData(cityName) {
 
-    var forecastUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
-    console.log("Forecast URL:", forecastUrl);
-
+    var forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${apiKey}`;
 
     fetch(forecastUrl)
         .then(function (response) {
             return response.json();
         })
         .then(function (data) {
-            console.log(data)
+            console.log(data);
 
 
             if (data.cod && data.cod !== 200) {
