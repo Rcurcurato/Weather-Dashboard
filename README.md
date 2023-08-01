@@ -15,9 +15,5 @@
     windspeed, and humidity.
 
 ## Link to website
-https://rcurcurato.github.io/Weather-Dashboard/
 
-
-
-## Screenshot
-![Alt text](<assets/images/Screenshot 2023-08-01 175238.png>)
+## Video 
